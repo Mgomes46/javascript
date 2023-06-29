@@ -20,7 +20,7 @@ function inLista(n, l) {
 }
 
 function adicionar() {
-    if(isNumero(num.value) && !inLista(num.value, valores)) {
+    if (isNumero(num.value) && !inLista(num.value, valores)) {
         valores.push(Number(num.value))
         let item = document.createElement('option')
         item.text = `valor ${num.value} adicionado.`
@@ -42,6 +42,7 @@ function finalizar() {
         let soma = 0
         let midia = 0 
         for(let pos in valores) {
+            soma += valores[pos]
             if (valores[pos] > maior)
                 maior = valores[pos]
             if (valores[pos] < menor)
